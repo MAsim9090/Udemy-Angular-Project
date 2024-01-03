@@ -1,0 +1,60 @@
+
+<div class="shopping-edit-main">
+    <p>shopping-edit works!</p>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <form action="" [formGroup]="shoppingEditForm">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" value="" class="form-control" formControlName="name">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" name="amount" value="" class="form-control"  formControlName="amount">
+                            </div>
+                        </div>
+                        <div class="row" formGroupName="address">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="street">street</label>
+                                    <input type="text" name="street" value="" class="form-control"  formControlName="street">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="city">city</label>
+                                    <input type="text" name="city" value="" class="form-control"  formControlName="city">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mt-4 mb-4">
+                            <button class="btn btn-success me-3" (click)="ingredientAdd($event)">Add</button>
+                            <button class="btn btn-success me-3" (click)="ingredientUpdate()">Update</button>
+                            <button class="btn btn-danger me-3" (click)="ingredientDelete()">Delete</button>
+                            <button class="btn btn-primary me-3" (click)="ingredientClear()">Clear</button>
+                        </div>
+                    </div>
+                 
+                </form>
+    
+                <div class="ingredient-add" *ngIf="showAdded">
+                    <h5>Ingredient Added</h5>
+                    <ul *ngFor="let item of addedList">
+                        <li>{{item.name}}</li>
+                        <li>{{item.amount}}</li>
+                        <li>{{item.address.street}}</li>
+                        <li>{{item.address.city}}</li>
+                    </ul>
+                    <!-- <p>Ingredient Name: {{nameAdded}}</p>
+                    <p>Ingredient Name: {{amountAdded}}</p> -->
+                </div>
+            </div>
+        </div>
+    </div>

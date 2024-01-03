@@ -1,0 +1,18 @@
+<div class="recipe-list-main">
+    <p>Recipe List</p>
+  
+    <div class="row" *ngFor="let items of recipes">
+      <div class="col-md-8">
+        {{ items.recipeName }}
+        <br />
+        {{ items.description }}
+      </div>
+  
+      <div class="col-md-4">
+        <img [src]="items.imagePath" width="50%" alt="recipe-img" />
+      </div>
+    </div>
+  
+    <app-recipe-item></app-recipe-item>
+  </div>
+  

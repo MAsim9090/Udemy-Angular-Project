@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-12">
+      <br />
+      <hr />
+  
+      <app-shopping-edit></app-shopping-edit>
+      <p>shopping-list works!</p>
+  
+      <ul class="list-group">
+          <a href="#" class="list-group-item" *ngFor="let item of ingredients">
+            <p>{{item.ingredientName}}</p>
+            <p>({{item.amount}})</p>
+          </a>
+      </ul>
+    </div>
+  </div>
+  
