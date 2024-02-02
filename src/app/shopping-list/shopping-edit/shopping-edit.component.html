@@ -1,7 +1,6 @@
 
 <div class="shopping-edit-main">
     <p>shopping-edit works!</p>
-    
         <div class="row">
             <div class="col-md-12">
                 <form action="" [formGroup]="shoppingEditForm">
@@ -36,6 +35,7 @@
                     <div class="row">
                         <div class="col-md-12 mt-4 mb-4">
                             <button class="btn btn-success me-3" (click)="ingredientAdd($event)">Add</button>
+                            <button class="btn btn-success me-3" (click)="ingredientShow()">Show</button>
                             <button class="btn btn-success me-3" (click)="ingredientUpdate()">Update</button>
                             <button class="btn btn-danger me-3" (click)="ingredientDelete()">Delete</button>
                             <button class="btn btn-primary me-3" (click)="ingredientClear()">Clear</button>
@@ -46,14 +46,18 @@
     
                 <div class="ingredient-add" *ngIf="showAdded">
                     <h5>Ingredient Added</h5>
-                    <ul *ngFor="let item of addedList">
+                    <ul ngClass="items-list" *ngFor="let item of addedListShow, let  i = index" (click)="removeItem(i)">
                         <li>{{item.name}}</li>
                         <li>{{item.amount}}</li>
                         <li>{{item.address.street}}</li>
                         <li>{{item.address.city}}</li>
+                        <li>
+                            {{i}}
+                            <button ngClass="btn btn-primary"> 
+                                Remove 
+                            </button>
+                        </li>
                     </ul>
-                    <!-- <p>Ingredient Name: {{nameAdded}}</p>
-                    <p>Ingredient Name: {{amountAdded}}</p> -->
                 </div>
             </div>
         </div>

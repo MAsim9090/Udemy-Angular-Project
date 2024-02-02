@@ -1,16 +1,53 @@
 
+<!-- server status -->
+
+<p> Server with ID is offline</p>
+<p> {{ 'Server' }}  with {{serverId}} is {{getServerStatus()}}</p>
+
+
+<!-- user filed check -->
+
 <label for="username">Username</label>
 <input type="text" class="form-control w-25" [(ngModel)]="username" name="username">
 <p>{{username}}</p>
 <button class="btn btn-primary" [disabled]="username === '' " (click)="userFieldCheck()">Click</button>
 
+<!-- <ul *ngFor="let serverItem of serverUser">
+    <li>
+        {{serverItem}}
+    </li>
+</ul> -->
+
+<ul *ngFor="let serverStore of serverGet">
+    <li>
+        {{serverStore}}
+    </li>
+</ul>
+
 <br>
 <br>
 
-<button class="btn btn-primary" (click)="displayDetail()">Display Details</button>
+<button class="btn btn-primary mb-4" (click)="displayDetail()">Display Details</button>
 
 <p *ngIf="textShow">Paragraph Toggle</p>
 
 <ul *ngFor="let item of displayArray; let i = index">
     <li ngClass="item-color" [ngStyle]="{'backgroundColor': i > 4 ? 'blue' : 'transparent','color': i > 4 ? '#fff' : '#000'}">{{item}}</li>
 </ul>
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>My Servers</h2>
+        <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+        <br><br>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let server of servers; let i = index"
+            (click)="onRemoveServer(i)">{{ server }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

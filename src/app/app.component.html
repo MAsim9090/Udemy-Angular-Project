@@ -1,12 +1,30 @@
 
 <app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="server-main">
+                <p>Server Heading</p>
 
+                <app-server></app-server>
+
+                <app-server-element></app-server-element>
+                <!-- <div class="app-server"></div> -->
+            </div>
+
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <app-recipes></app-recipes>
             <br>
             <app-shopping-list></app-shopping-list>
+            <!-- <a ngClass="btn btn-primary mt-5" routerLink="/shopping-edit">shopping edit</a> -->
         </div>
     </div>
+    
+<router-outlet></router-outlet>
+
 </div>

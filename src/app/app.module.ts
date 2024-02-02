@@ -11,18 +11,23 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ServerComponent } from './server/server.component';
+import { ServerElementComponent } from './server-element/server-element.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CockpitComponent,
   ],
   imports: [
+    AppRoutingModule,
     HeaderComponent,
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
     ServerComponent,
     BrowserModule,
+    ServerElementComponent,
     RecipesComponent,
     RecipeDetailComponent,
     RecipeListComponent,

@@ -3,7 +3,7 @@
       <br />
       <hr />
   
-      <app-shopping-edit></app-shopping-edit>
+      <!-- <app-shopping-edit></app-shopping-edit> -->
       <p>shopping-list works!</p>
   
       <ul class="list-group">
@@ -12,6 +12,10 @@
             <p>({{item.amount}})</p>
           </a>
       </ul>
+
+      <ul [ngStyle]="{'list-style': 'none'}">
+        <li><a ngClass="btn btn-primary mt-4" routerLink="" (click)="edit($event)">Shopping Edit Component</a></li>
+      </ul>
     </div>
   </div>
-  
+

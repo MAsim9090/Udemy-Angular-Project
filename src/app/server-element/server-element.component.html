@@ -1,0 +1,8 @@
+<p>server-element works!</p>
+
+<input class="form-control w-50 mb-4" type="text" [(ngModel)]="serverName" name="serverName" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
+<p>{{serverCreationStatus}}</p>
+<button class="btn btn-primary mb-2" [disabled]="!allowNewServer" (click)="onCreationStatus()">Add Server</button>
+
+
