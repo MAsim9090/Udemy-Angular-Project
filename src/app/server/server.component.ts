@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ServerElementComponent } from '../server-element/server-element.component';
+import { CockpitComponent } from '../cockpit/cockpit.component';
+import { GameControlComponent } from '../game-control/game-control.component';
+import { EvenComponent } from '../even/even.component';
+import { OddComponent } from '../odd/odd.component';
 
 @Component({
   selector: 'app-server',
   // selector: '.app-server',
   standalone: true,
   imports: [CommonModule,
-    FormsModule],
+    FormsModule,
+    ServerElementComponent,
+    CockpitComponent,
+    GameControlComponent,
+    EvenComponent,
+    OddComponent],
   templateUrl: './server.component.html',
   // styleUrl: './server.component.css'
   styles: [`h3{
@@ -16,13 +26,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class ServerComponent {
 
+  // constructor(public serverElement: ServerElementComponent){}
+
   // Server status check
 
   serverId: number = 10;
   serverStatus: string = 'offline';
 
-
-  username = '';
+  username: any = '';
   serverUser: any = [];
   textShow = false;
   displayNumber = 0;
@@ -51,7 +62,7 @@ export class ServerComponent {
   }
 
 
-  // degugging 
+  // degugging
   
   servers: any = [];
 
@@ -62,6 +73,57 @@ export class ServerComponent {
   onRemoveServer(id: number) {
     let position = id - 1;
     this.servers.splice(position, 1);
+  }
+
+ // section 5 custom property and custom events
+
+ serverElements: any = [];
+ evenNumbers: number[] = []
+ oddNumbers: number[] = []
+
+ serverElement = [{
+   type: 'server', name: 'TestServer', content: 'Just a test content'
+ }];
+
+ onServerAdded(serverData: { serverName: string, serverContent: string }){
+   this.serverElements.push({
+     type: 'server',
+     name: serverData.serverName,
+     content: serverData.serverContent
+   }) 
+
+   console.log('serverAdded:',this.serverElements)
+ }
+
+ onBlueprintAdded(blueprintData: { serverName: string, serverContent: string }){
+   this.serverElements.push({
+     type: 'blueprint',
+     name: blueprintData.serverName,
+     content: blueprintData.serverContent
+   }) 
+ }
+
+
+  //  LifeCycle Hooks
+
+  onChangeFirst(){
+    this.serverElements[0].name = 'Changed!!!';
+  }
+
+  onDestroyFirst(){
+    this.serverElements.splice(0,1);
+  }
+
+
+  // game-control
+
+  onIntervalFired(firedNumber: number){
+    console.log(firedNumber)
+    if(firedNumber % 2 === 0){
+      this.evenNumbers.push(firedNumber)
+    } else {
+      this.oddNumbers.push(firedNumber);
+    }
   }
 
 }

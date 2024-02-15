@@ -2,12 +2,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 import { IngreditentModule } from '../ingreditent/ingreditent.module';
-import { Router } from '@angular/router';
+import { Router,RouterOutlet,RouterLink,RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-shopping-list',
   standalone: true,
   imports: [CommonModule,
     ShoppingEditComponent,
+    RouterOutlet,
+    RouterLink, 
+    RouterLinkActive
   ],
   templateUrl: './shopping-list.component.html',
   styleUrl: './shopping-list.component.css',

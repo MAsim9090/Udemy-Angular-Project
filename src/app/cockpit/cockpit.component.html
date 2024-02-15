@@ -1,1 +1,29 @@
-<p>cockpit works!</p>
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="mb-4">Add new Servers or bluePrints!</p>
+            <label for="">Server Name</label>
+            <!-- <input type="text" class="form-control" [(ngModel)]="newServerName" name="newServerName"> -->
+            <input type="text" class="form-control" #serverNameInput name="newServerName">
+           
+            <!-- local references -->
+            <!-- <input type="text" class="form-control" #serverNameInput name="newServerName"> -->
+
+            <label for="">Server Content</label>
+
+            <!-- Two way data binding -->
+            <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent" name="newServerContent"> --> 
+
+            <!-- Local Rerence -->
+            <input type="text" class="form-control" #ServerContentInput name="newServerContent">
+            <br>
+            <button class="btn btn-primary me-4" (click)="onAddServer(serverNameInput)">Add Server</button>
+            
+            <!-- local references -->
+            <!-- <button class="btn btn-primary me-4" (click)="onAddServer(serverNameInput)">Add Server</button> -->
+            
+            <button class="btn btn-primary" (click)="onAddBlueprint(serverNameInput)">Add Blueprint</button>
+        </div>
+    </div>
+
+</div>

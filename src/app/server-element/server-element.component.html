@@ -1,8 +1,49 @@
-<p>server-element works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <p class="mt-5">server-element works!</p> -->
+            <!-- <input class="form-control w-50 mb-4" type="text" [(ngModel)]="serverName" name="serverName" (input)="onUpdateServerName($event)">
+            <p>{{serverName}}</p>
+            <p>{{serverCreationStatus}}</p>
+            <button class="btn btn-primary mb-2" [disabled]="!allowNewServer" (click)="onCreationStatus()">Add Server</button> -->
+        </div>
+    </div>
+</div>
 
-<input class="form-control w-50 mb-4" type="text" [(ngModel)]="serverName" name="serverName" (input)="onUpdateServerName($event)">
-<p>{{serverName}}</p>
-<p>{{serverCreationStatus}}</p>
-<button class="btn btn-primary mb-2" [disabled]="!allowNewServer" (click)="onCreationStatus()">Add Server</button>
 
 
+
+<!-- with cockpit -->
+
+
+<div class="container mb-1">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <p class="mt-5">Server Elements section 5 </p> -->
+            <!-- <div *ngFor="let serverElem of serverElements"> -->
+                <div class="server-elm-main">
+                    <p class="element-name">
+                        {{element.name}}
+                    </p>
+
+                    <p class="element-name" #heading>
+                        {{name}}
+                    </p>
+
+                     <!-- projecting content using ngcontent -->
+                    <ng-content></ng-content>
+
+                    <!-- <p class="element-content">
+                        <strong *ngIf="element.type === 'server'" style="color: red">
+                            {{element.content}}
+                        </strong>
+                        <strong *ngIf="element.type === 'blueprint'" style="color: blue">
+                            {{element.content}}
+                        </strong>
+                    </p> -->
+                </div>
+              
+            <!-- </div> -->
+        </div>
+    </div>
+</div>

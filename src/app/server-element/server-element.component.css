@@ -1,0 +1,14 @@
+.server-elm-main{
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+.element-name{
+    background-color: gray;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px 3px 0 0;
+}
+
+.element-content{
+    padding: 10px 20px;
+}

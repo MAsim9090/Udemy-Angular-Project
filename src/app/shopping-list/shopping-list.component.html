@@ -14,8 +14,10 @@
       </ul>
 
       <ul [ngStyle]="{'list-style': 'none'}">
-        <li><a ngClass="btn btn-primary mt-4" routerLink="" (click)="edit($event)">Shopping Edit Component</a></li>
+        <li><a ngClass="btn btn-primary mt-4" routerLink="/shopping-edit">Shopping Edit Component</a></li>
+        <!-- <li><a ngClass="btn btn-primary mt-4" routerLink="/shopping-edit" (click)="edit($event)">Shopping Edit Component</a></li> -->
       </ul>
     </div>
   </div>
 
+  <router-outlet></router-outlet>
