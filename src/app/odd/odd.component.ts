@@ -15,5 +15,4 @@ import { FormsModule } from '@angular/forms';
 
 export class OddComponent {
   @Input() number!: number;
-
 }

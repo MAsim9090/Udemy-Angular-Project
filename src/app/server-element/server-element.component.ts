@@ -71,6 +71,29 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
   }
 
 
+  // LifeCycle Hooks:
+
+  // ngOnChanges :
+  // Called after a bound input property changes
+
+  // ngOnInIt : 
+  // Called once the component is initialized
+
+  // ngDoCheck : 
+  // Called during every change detection run
+
+  // ngAfterContentInit : 
+  // Called after content (ng-content) has been projected into view
+
+  // ngAfterContentChecked : 
+  // Called every time the projected content has been checked
+
+  // ngAfterViewInit : 
+  // Callded after the component's view (and child views) has been initialized
+
+  // ngAfterViewChecked : 
+  // Caled every time the view (and child views) have been checked
+
 
 
   serverElements: any = [];
@@ -98,6 +121,9 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
   getColor(){
     return this.serverStatus === 'online' ? 'green' : 'red';
   }
+
+
+
 
 
 }
