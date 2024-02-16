@@ -1,5 +1,5 @@
 
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <!-- <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -18,9 +18,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-recipes></app-recipes>
+            <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
             <br>
-            <app-shopping-list></app-shopping-list> 
+            <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list> 
             <!-- <a ngClass="btn btn-primary mt-5" routerLink="/shopping-edit">shopping edit</a> -->
         </div>
     </div>
