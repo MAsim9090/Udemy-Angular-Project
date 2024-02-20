@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RecipesModule } from '../recipe.module';
 
 
 @Component({
@@ -13,4 +14,6 @@ import { CommonModule } from '@angular/common';
 })
 export class RecipeDetailComponent {
 
+  constructor(){}
+  @Input() recipe!: RecipesModule;
 }

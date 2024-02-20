@@ -17,4 +17,7 @@ import { Routes } from '@angular/router';
 })
 export class RecipesComponent {
 
+  selectedRecipe(selectedRec: any){
+    console.log(selectedRec)
+  }
 }

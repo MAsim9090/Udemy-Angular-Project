@@ -1,1 +1,13 @@
-<p>recipe-item works!</p>
+<a href="#" (click)="onSelected()">
+<div class="row">
+    <div class="col-md-8">
+      {{ recipe.recipeName }}
+      <br />
+      {{ recipe.description }}
+    </div>
+
+    <div class="col-md-4">
+      <img [src]="recipe.imagePath" width="50%" alt="recipe-img" />
+    </div>
+</div>
+</a>

@@ -43,6 +43,36 @@
                     </div>
                  
                 </form>
+
+
+                <!-- test form -->
+
+                <form action="" [formGroup]="shoppingEditForm">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" value="" class="form-control" #nameInput>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" name="amount" value="" class="form-control"  #amountInput>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mt-4 mb-4">
+                            <button class="btn btn-success me-3" (click)="onAddItem">onAdd</button>
+                            <button class="btn btn-success me-3" (click)="ingredientShow()">Show</button>
+                            <button class="btn btn-success me-3" (click)="ingredientUpdate()">Update</button>
+                            <button class="btn btn-danger me-3" (click)="ingredientDelete()">Delete</button>
+                            <button class="btn btn-primary me-3" (click)="ingredientClear()">Clear</button>
+                        </div>
+                    </div>
+                 
+                </form>
     
                 <div class="ingredient-add" *ngIf="showAdded">
                     <h5>Ingredient Added</h5>
