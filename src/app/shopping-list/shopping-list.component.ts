@@ -17,15 +17,18 @@ import { Router,RouterOutlet,RouterLink,RouterLinkActive } from '@angular/router
   styles: ['ul { list-style:none }']
 })
 export class ShoppingListComponent {
+  constructor(private route: Router){ }
+  
+  ngOnInit(){  }
 
   ingredients : IngreditentModule[] = [
     new IngreditentModule ('Apple', 10),
     new IngreditentModule ('Mango', 20)
   ];
 
-  constructor(private route: Router){ }
-  
-  ngOnInit(){  }
+  onIngerientAdded(ingredient:IngreditentModule){
+    this.ingredients.push(ingredient);
+  }
 
   edit(e: any){
     this.route.navigate(['/shopping-edit']);

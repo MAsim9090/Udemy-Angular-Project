@@ -16,10 +16,18 @@ import { CockpitComponent } from './cockpit/cockpit.component';
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import {appBasicHighlight} from './basic-heightlight/basic-heightlight.directive';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless/unless.directive';
+import { DropdownDirective } from './ingreditent/dropdown.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    appBasicHighlight,
+    BetterHighlightDirective,
+    UnlessDirective,
+    DropdownDirective,
   ],
   imports: [
     AppRoutingModule,

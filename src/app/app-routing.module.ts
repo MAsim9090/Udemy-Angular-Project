@@ -4,12 +4,14 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerComponent } from './server/server.component';
+// import { RecipesComponent } from './recipes/recipes.component';
 
 const routes: Routes = [
   {path: 'shopping-edit', component: ShoppingEditComponent},
   {path: 'shopping-list', component: ShoppingListComponent},
   {path: 'cockpit', component: CockpitComponent},
-  {path: 'server', component: ServerComponent}
+  {path: 'server', component: ServerComponent},
+  // {path: 'recipe', component: RecipesComponent}
 ];
 
 

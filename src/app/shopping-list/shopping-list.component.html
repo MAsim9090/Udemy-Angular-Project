@@ -1,25 +1,27 @@
+<div class="container">
 <div class="row">
     <div class="col-md-12">
-      <br />
-      <hr />
+      <!-- <br />
+      <hr /> -->
   
       <!-- <app-shopping-edit></app-shopping-edit> -->
-      <p>shopping-list works!</p>
-  
-      <ul class="list-group">
-          <a href="#" class="list-group-item" *ngFor="let item of ingredients">
-            <p>{{item.ingredientName}}</p>
-            <p>({{item.amount}})</p>
-          </a>
-      </ul>
+      <!-- <p>shopping-list works!</p> -->
 
-      <ul [ngStyle]="{'list-style': 'none'}">
-        <li><a ngClass="btn btn-primary mt-4" routerLink="/shopping-edit">Shopping Edit Component</a></li>
+      <!-- <ul [ngStyle]="{'list-style': 'none'}">
+        <li><a ngClass="btn btn-primary mt-4" routerLink="/shopping-edit">Shopping Edit Component</a></li> -->
         <!-- <li><a ngClass="btn btn-primary mt-4" routerLink="/shopping-edit" (click)="edit($event)">Shopping Edit Component</a></li> -->
-      </ul>
+      <!-- </ul> -->
 
-      <!-- <app-shopping-edit (ingredientAdded)=""></app-shopping-edit> -->
+      <app-shopping-edit (ingredientAdded)="onIngerientAdded($event)"></app-shopping-edit>
+
+      <ul class="list-group">
+        <a href="#" class="list-group-item" *ngFor="let item of ingredients">
+          <p>{{item.ingredientName}}</p>
+          <p>({{item.amount}})</p>
+        </a>
+    </ul>
+
     </div>
   </div>
-
+</div>
   <router-outlet></router-outlet>

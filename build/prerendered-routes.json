@@ -1,0 +1,8 @@
+{
+  "routes": [
+    "/cockpit",
+    "/server",
+    "/shopping-edit",
+    "/shopping-list"
+  ]
+}

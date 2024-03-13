@@ -1,5 +1,7 @@
 
 <!-- server status -->
+<div class="container">
+
 
 <p> Server with ID is offline</p>
 <p> {{ 'Server' }}  with {{serverId}} is {{getServerStatus()}}</p>
@@ -52,15 +54,18 @@
 </div>
 
 
-
+</div>
 <!-- Server Element section 5 -->
 
 
 <app-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)"></app-cockpit>
 
 
-<button class="btn btn-primary me-2" (click)="onChangeFirst()">Change First Element</button>
-<button class="btn btn-primary" (click)="onDestroyFirst()">Destroy First Element</button>
+<div class="container">
+    <button class="btn btn-primary me-2" (click)="onChangeFirst()">Change First Element</button>
+    <button class="btn btn-primary" (click)="onDestroyFirst()">Destroy First Element</button>
+</div>
+
 
 <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement" [name]="serverElement.name">
 

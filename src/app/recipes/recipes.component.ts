@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { Routes } from '@angular/router';
+import { RecipesModule } from './recipe.module';
 
 @Component({
   selector: 'app-recipes',
@@ -16,8 +17,8 @@ import { Routes } from '@angular/router';
   styleUrl: './recipes.component.css'
 })
 export class RecipesComponent {
-
-  selectedRecipe(selectedRec: any){
-    console.log(selectedRec)
-  }
+  selectedRecipe!: RecipesModule;
+  // selectedRecipe(selectedRec: any){
+  //   console.log(selectedRec)
+  // }
 }

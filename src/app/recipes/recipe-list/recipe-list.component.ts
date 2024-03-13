@@ -1,8 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 import { RecipesModule } from '../recipe.module';
-import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-recipe-list',

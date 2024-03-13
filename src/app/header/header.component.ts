@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CockpitComponent } from '../cockpit/cockpit.component';
 import { Router,RouterOutlet,RouterLink,RouterLinkActive } from '@angular/router';
-
 @Component({
   selector: 'app-header',
   standalone: true,

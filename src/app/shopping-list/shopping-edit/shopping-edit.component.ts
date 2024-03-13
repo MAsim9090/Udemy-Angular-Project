@@ -42,20 +42,20 @@ onAddItem(){
   this.ingredientAdded.emit(newIngredient);
 }
 
-  ingredientAdd(e: any) {
-    e.preventDefault();
-    console.log(this.shoppingEditForm.value);
-    this.addedList.push(this.shoppingEditForm.value);
-    localStorage.setItem('shoppingEdit',JSON.stringify(this.shoppingEditForm.value));
-    this.shoppingEditForm.reset();
-    console.log(this.addedList);
-  }
+  // ingredientAdd(e: any) {
+  //   e.preventDefault();
+  //   console.log(this.shoppingEditForm.value);
+  //   this.addedList.push(this.shoppingEditForm.value);
+  //   localStorage.setItem('shoppingEdit',JSON.stringify(this.shoppingEditForm.value));
+  //   this.shoppingEditForm.reset();
+  //   console.log(this.addedList);
+  // }
 
-  ingredientShow(){
-    this.showAdded = true;
-    let shoppingEditGet: any = localStorage.getItem('shoppingEdit');
-    this.addedListShow.push( JSON.parse(shoppingEditGet));
-  }
+  // ingredientShow(){
+  //   this.showAdded = true;
+  //   let shoppingEditGet: any = localStorage.getItem('shoppingEdit');
+  //   this.addedListShow.push( JSON.parse(shoppingEditGet));
+  // }
 
   ingredientUpdate() {
     

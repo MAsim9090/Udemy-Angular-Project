@@ -1,7 +1,7 @@
 
-<div class="shopping-edit-main">
-    <p>shopping-edit works!</p>
-        <div class="row">
+<div class="container shopping-edit-main">
+    <!-- <p>shopping-edit works!</p> -->
+        <!-- <div class="row">
             <div class="col-md-12">
                 <form action="" [formGroup]="shoppingEditForm">
                     <div class="row">
@@ -43,10 +43,12 @@
                     </div>
                  
                 </form>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-12">
 
-
-                <!-- test form -->
-
+                   <!-- test form -->
                 <form action="" [formGroup]="shoppingEditForm">
                     <div class="row">
                         <div class="col-md-2">
@@ -64,9 +66,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 mt-4 mb-4">
-                            <button class="btn btn-success me-3" (click)="onAddItem">onAdd</button>
-                            <button class="btn btn-success me-3" (click)="ingredientShow()">Show</button>
-                            <button class="btn btn-success me-3" (click)="ingredientUpdate()">Update</button>
+                            <button class="btn btn-success me-3" type="submit" (click)="onAddItem()">onAdd</button>
                             <button class="btn btn-danger me-3" (click)="ingredientDelete()">Delete</button>
                             <button class="btn btn-primary me-3" (click)="ingredientClear()">Clear</button>
                         </div>
